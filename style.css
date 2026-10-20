@@ -1,0 +1,120 @@
+
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f6f8;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    display: block;
+    padding: 8px 0;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+/* Nút menu mobile */
+.menu-icon {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Nội dung trang */
+.content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.content p {
+    margin-bottom: 10px;
+}
+
+/* Responsive cho điện thoại và máy tính bảng */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+    }
+
+    .nav-links a:hover {
+        background-color: #444;
+    }
+}
